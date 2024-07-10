@@ -26,12 +26,6 @@ jobs:
       - name: Extract SonarQube Quality Gate Status
         run: curl -u ${{ secrets.SONAR_TOKEN }} ${{ secrets.SONAR_HOST_URL }}/api/qualitygates/project_status?projectKey=my_project_key -o quality_gate.json
 
-      - name: Get current number of issues
-        id: sonar_issues
-        run: |
-          current_issues=$(jq '.projectStatus.conditions[] | select(.metricKey == "new_issues").actualValue' quality_gate.json)
-          echo "::set-output name=current_issues::$current_issues"
-          
       - name: Compare with previous issues
         id: compare_issues
         run: |
