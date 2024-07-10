@@ -17,16 +17,6 @@ class ArticleCrudController extends CrudController
         $this->crud->setModel(Article::class);
         $this->crud->setRoute('articles');
     }
-
-    public function setupUpdateOperation()
-    {
-    }
-
-    protected function create()
-    {
-        return response('create');
-    }
-
     protected function detail()
     {
         return response('detail');
