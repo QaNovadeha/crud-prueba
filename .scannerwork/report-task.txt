@@ -1,0 +1,6 @@
+projectKey=CRUD
+serverUrl=http://localhost:9000
+serverVersion=10.6.0.92116
+dashboardUrl=http://localhost:9000/dashboard?id=CRUD
+ceTaskId=6870a5a2-ecc7-473e-b299-3a3fb1b2fc2c
+ceTaskUrl=http://localhost:9000/api/ce/task?id=6870a5a2-ecc7-473e-b299-3a3fb1b2fc2c
